@@ -16,10 +16,10 @@ public class Solution
         Array.Sort(queryPairs, (first, second) => first.Time - second.Time);
         Array.Sort(logs, (first, second) => first[1] - second[1]);
 
-        return findNumberOfServersNotReceivingRequestsPerQuery(numberOfServers, logs, timeRange, queryPairs);
+        return FindNumberOfServersNotReceivingRequestsPerQuery(numberOfServers, logs, timeRange, queryPairs);
     }
 
-    private int[] findNumberOfServersNotReceivingRequestsPerQuery(int numberOfServers, int[][] logs, int timeRange, QueryPair[] queryPairs)
+    private int[] FindNumberOfServersNotReceivingRequestsPerQuery(int numberOfServers, int[][] logs, int timeRange, QueryPair[] queryPairs)
     {
         int front = 0;
         int back = 0;
